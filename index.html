@@ -42,19 +42,23 @@
             </ul>
         </nav>
         <div class="user-block">
-            <a class="btn search" href="#">Поиск</a>
-            <div class="pop-up search-pop-up">
-                <input class="input" type="text" placeholder="Что ищем?">
-            </div>
-            <a class="btn enter" href="#">Вход</a>
-            <div class="pop-up login-pop-up">
-                <form action="#" method="post">
-                    <input class="input" type="email" placeholder="Электронная почта">
-                    <input class="input" type="password" placeholder="Пароль">
-                    <button class="btn">Войти</button>
-                    <a class="form-link" href="#">Забыли пароль?</a>
-                    <a class="form-link" href="#">Новая регистрация</a>
+            <div class="btn search">
+                Поиск
+                <form class="pop-up search-pop-up">
+                    <input class="input" type="text" placeholder="Что ищем?">
                 </form>
+            </div>
+            <div class="btn enter">
+                Вход
+                <div class="pop-up login-pop-up">
+                    <form action="#" method="post">
+                        <input class="input" type="email" placeholder="Электронная почта">
+                        <input class="input" type="password" placeholder="Пароль">
+                        <button class="btn">Войти</button>
+                        <a class="form-link" href="#">Забыли пароль?</a>
+                        <a class="form-link" href="#">Новая регистрация</a>
+                    </form>
+                </div>
             </div>
             <a class="shop-cart" href="#">Пусто</a>
         </div>
@@ -84,6 +88,7 @@
     </div>
     <main>
         <section class="offer">
+            <h1>Магазин мороженого Gllacy Shop</h1>
             <article class="offer-raspberries">
                 <h2>Малинка даром!</h2>
                 <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -95,46 +100,48 @@
                 <a class="btn want-btn" href="#">Хочу шоколадки!</a>
             </article>
         </section>
-        <section class="products">
-            <article class="product-item">
-                <img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-                <span class="hit">Хит</span>
-                <div class="price">
-                    310₽<span>/кг</span>
-                </div>
-                <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-                <button class="btn product-view">Быстрый просмотр</button>
-            </article>
-            <article class="product-item">
-                <img src="http://placehold.it/150x100" alt="Сливочно-кофейное с кусочками шоколада">
-                <span class="hit">Хит</span>
-                <div class="price">
-                    380₽<span>/кг</span>
-                </div>
-                <a href="#">Сливочно-кофейное с кусочками шоколада</a>
-                <button class="btn product-view">Быстрый просмотр</button>
-            </article>
-            <article class="product-item">
-                <img src="http://placehold.it/150x100" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-                <span class="hit">Хит</span>
-                <div class="price">
-                    355₽<span>/кг</span>
-                </div>
-                <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-                <button class="btn product-view">Быстрый просмотр</button>
-            </article>
-            <article class="product-item">
-                <img src="http://placehold.it/150x100" alt="Сливочное крем-брюле с карамельной подливкой">
-                <span class="hit">Хит</span>
-                <div class="price">
-                    415₽<span>/кг</span>
-                </div>
-                <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-                <button class="btn product-view">Быстрый просмотр</button>
-            </article>
+        <section class="catalog">
+            <div class="products">
+                <article class="product-item">
+                    <img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                    <span class="hit">Хит</span>
+                    <div class="price">
+                        310₽<span>/кг</span>
+                    </div>
+                    <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+                    <a href="#" class="btn product-view">Быстрый просмотр</a>
+                </article>
+                <article class="product-item">
+                    <img src="http://placehold.it/150x100" alt="Сливочно-кофейное с кусочками шоколада">
+                    <span class="hit">Хит</span>
+                    <div class="price">
+                        380₽<span>/кг</span>
+                    </div>
+                    <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+                    <a href="#" class="btn product-view">Быстрый просмотр</a>
+                </article>
+                <article class="product-item">
+                    <img src="http://placehold.it/150x100" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                    <span class="hit">Хит</span>
+                    <div class="price">
+                        355₽<span>/кг</span>
+                    </div>
+                    <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+                    <a href="#" class="btn product-view">Быстрый просмотр</a>
+                </article>
+                <article class="product-item">
+                    <img src="http://placehold.it/150x100" alt="Сливочное крем-брюле с карамельной подливкой">
+                    <span class="hit">Хит</span>
+                    <div class="price">
+                        415₽<span>/кг</span>
+                    </div>
+                    <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+                    <a href="#" class="btn product-view">Быстрый просмотр</a>
+                </article>
+            </div>
         </section>
         <section class="about-us">
-            <h1>Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h1>
+            <h3>Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
             <ul class="features">
                 <li class="feature-item feature-icecream">
                     Все наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.
@@ -155,7 +162,7 @@
                 <span>Новое в нашем блоге</span>
                 <a class="link" href="#">
                       10 способов сервировки <br> фруктовых щербетов <br> к столу
-                  </a>
+                </a>
             </article>
             <div class="newsletter">
                 <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
@@ -177,15 +184,6 @@
                     <span>8 812 450-25-25</span> (с 10 до 20 ежедневно)
                 </p>
                 <a class="btn feedback-btn" href="#">Форма обратной связи</a>
-                <div class="pop-up feedback-pop-up">
-                    <span class="cross"></span>
-                    <form action="#" method="post">
-                        <input class="input" type="text" placeholder="Как вас зовут?">
-                        <input class="input" type="text" placeholder="Ваша почта для ответа?">
-                        <textarea name="text">Напишите что-нибудь...</textarea>
-                        <button class="btn">Отправить</button>
-                    </form>
-                </div>
             </div>
         </section>
     </main>
@@ -196,7 +194,7 @@
             <a class="social social-fb" href="https://www.facebook.com/htmlacademy">fb</a>
             <a class="social social-vk" href="https://vk.com/htmlacademy">vk</a>
         </section>
-        <ul class="links">
+        <ul class="footer-links">
             <li class="love">
                 <a href="#">Для поставщиков</a>
             </li>
@@ -213,10 +211,19 @@
         <section class="copyright">
             <a class="htmlacademy-logo" href="#">
                   <img src="http://placehold.it/150x100" alt="html academy">
-                </a>
+            </a>
             <p>
                 Сделано в <a class="academy-link" href="http://htmlacademy.ru">HTML Academy</a> Ⓒ 2017
             </p>
         </section>
     </footer>
+    <div class="modal">
+        <span class="cross"></span>
+        <form action="#" method="post">
+            <input class="input" type="text" placeholder="Как вас зовут?">
+            <input class="input" type="text" placeholder="Ваша почта для ответа?">
+            <textarea name="text" placeholder="Напишите что-нибудь..."></textarea>
+            <button type="submit" class="btn">Отправить</button>
+        </form>
+    </div>
 </body>
