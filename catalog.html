@@ -45,15 +45,18 @@
             <div class="btn search">
                 Поиск
                 <form class="pop-up search-pop-up">
-                    <input class="input" type="text" placeholder="Что ищем?">
+                    <label for="search" class="visually-hidden">Поиск</label>
+                    <input class="input" type="text" name="search" id="search" placeholder="Что ищем?">
                 </form>
             </div>
             <div class="btn enter">
                 Вход
                 <form action="#" method="post" class="pop-up login-pop-up">
-                    <input class="input" type="email" placeholder="Электронная почта">
-                    <input class="input" type="password" placeholder="Пароль">
-                    <button class="btn">Войти</button>
+                    <label for="email" class="visually-hidden">Электронная почта</label>
+                    <input class="input" type="email" id="email" placeholder="Электронная почта">
+                    <label for="password" class="visually-hidden">Пароль</label>
+                    <input class="input" type="password" id="password" placeholder="Пароль">
+                    <button class="btn" type="submit">Войти</button>
                     <a class="form-link" href="#">Забыли пароль?</a>
                     <a class="form-link" href="#">Новая регистрация</a>
                 </form>
@@ -63,10 +66,10 @@
                 <table>
                     <tr>
                         <td>
-                            <span class="cross"></span>
+                            <button type="button" aria-label="Закрыть" class="cross"></button>
                         </td>
                         <td>
-                            <img src="http://placehold.it/150x100" alt="Пломбир с апельсиновым джемом">
+                            <img src="img/basket1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
                         </td>
                         <td>
                             Пломбир с апельсиновым джемом
@@ -80,10 +83,10 @@
                     </tr>
                     <tr>
                         <td>
-                            <span class="cross"></span>
+                            <button type="button" aria-label="Закрыть" class="cross"></button>
                         </td>
                         <td>
-                            <img src="http://placehold.it/150x100" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                            <img src="img/basket2.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
                         </td>
                         <td>
                             Клубничный пломбир с присыпкой из белого шоколада
@@ -97,7 +100,7 @@
                     </tr>
                 </table>
                 Итого: 750 руб.
-                <button type="button" class="btn">Оформить заказ</button>
+                <a class="btn" href="#">Оформить заказ</a>
             </div>
 
         </div>
@@ -113,11 +116,68 @@
     </header>
     <main>
         <h1>Сливочное мороженое</h1>
-        <form class="filter"></form>
+        <form class="filter">
+            <fieldset>
+                <legend>Сортировка:</legend>
+                <select>
+                    <option>по популярности</option>
+                    <option>сначала недорогие</option>
+                    <option>сначала дорогие</option>
+                    <option>по жирности</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Цена:</legend>
+                <input type="range" min="100" max="500" step="1">
+            </fieldset>
+            <fieldset>
+                <legend>Жирность:</legend>
+                <label>
+                    0%
+                    <input type="radio" name="fat" value="0">
+                </label>
+                <label>
+                    до 10%
+                    <input type="radio" name="fat" value="10" checked>
+                </label>
+                <label>
+                    до 30%
+                    <input type="radio" name="fat" value="30">
+                </label>
+                <label>
+                    выше 30%
+                    <input type="radio" name="fat" value="31">
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Наполнители:</legend>
+                <label>
+                    шоколадные
+                    <input type="checkbox" value="chocolate">
+                </label>
+                <label>
+                    сахарные присыпки
+                    <input type="checkbox" value="sugar">
+                </label>
+                <label>
+                    фрукты
+                    <input type="checkbox" value="fruits">
+                </label>
+                <label>
+                    сиропы
+                    <input type="checkbox" value="syrup">
+                </label>
+                <label>
+                    джемы
+                    <input type="checkbox" value="jam">
+                </label>
+            </fieldset>
+            <button type="submit" class="btn">Применить</button>
+        </form>
         <section class="catalog">
             <div class="products">
                 <article class="product-item">
-                    <img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                    <img src="img/1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                     <div class="price">
                         310₽<span>/кг</span>
                     </div>
@@ -125,7 +185,7 @@
                     <a href="#" class="btn product-view">Быстрый просмотр</a>
                 </article>
                 <article class="product-item">
-                    <img src="http://placehold.it/150x100" alt="Сливочно-кофейное с кусочками шоколада">
+                    <img src="img/2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                     <div class="price">
                         380₽<span>/кг</span>
                     </div>
@@ -133,7 +193,7 @@
                     <a href="#" class="btn product-view">Быстрый просмотр</a>
                 </article>
                 <article class="product-item">
-                    <img src="http://placehold.it/150x100" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                    <img src="img/3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                     <div class="price">
                         355₽<span>/кг</span>
                     </div>
@@ -141,7 +201,7 @@
                     <a href="#" class="btn product-view">Быстрый просмотр</a>
                 </article>
                 <article class="product-item">
-                    <img src="http://placehold.it/150x100" alt="Сливочное крем-брюле с карамельной подливкой">
+                    <img src="img/4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                     <div class="price">
                         415₽<span>/кг</span>
                     </div>
@@ -149,7 +209,7 @@
                     <a href="#" class="btn product-view">Быстрый просмотр</a>
                 </article>
                 <article class="product-item">
-                    <img src="http://placehold.it/150x100" alt="Сливочное с брусничным джемом">
+                    <img src="img/5.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
                     <div class="price">
                         325₽<span>/кг</span>
                     </div>
@@ -157,7 +217,7 @@
                     <a href="#" class="btn product-view">Быстрый просмотр</a>
                 </article>
                 <article class="product-item">
-                    <img src="http://placehold.it/150x100" alt="Сливочно-черничное с цельными ягодами черники">
+                    <img src="img/6.jpg" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
                     <div class="price">
                         410₽<span>/кг</span>
                     </div>
@@ -165,7 +225,7 @@
                     <a href="#" class="btn product-view">Быстрый просмотр</a>
                 </article>
                 <article class="product-item">
-                    <img src="http://placehold.it/150x100" alt="Сливочно-лимонное с карамельной присыпкой">
+                    <img src="img/7.jpg" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
                     <div class="price">
                         375₽<span>/кг</span>
                     </div>
@@ -173,7 +233,7 @@
                     <a href="#" class="btn product-view">Быстрый просмотр</a>
                 </article>
                 <article class="product-item">
-                    <img src="http://placehold.it/150x100" alt="Сливочное с шоколадной стружкой">
+                    <img src="img/8.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой">
                     <div class="price">
                         320₽<span>/кг</span>
                     </div>
@@ -181,7 +241,7 @@
                     <a href="#" class="btn product-view">Быстрый просмотр</a>
                 </article>
                 <article class="product-item">
-                    <img src="http://placehold.it/150x100" alt="Сливочно-ванильное с кусочками шоколада">
+                    <img src="img/9.jpg" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
                     <div class="price">
                         440₽<span>/кг</span>
                     </div>
@@ -189,7 +249,7 @@
                     <a href="#" class="btn product-view">Быстрый просмотр</a>
                 </article>
                 <article class="product-item">
-                    <img src="http://placehold.it/150x100" alt="Сливочное с ментоловым сиропом">
+                    <img src="img/10.jpg" width="267" height="267" alt="Сливочное с ментоловым сиропом">
                     <div class="price">
                         435₽<span>/кг</span>
                     </div>
@@ -197,7 +257,7 @@
                     <a href="#" class="btn product-view">Быстрый просмотр</a>
                 </article>
                 <article class="product-item">
-                    <img src="http://placehold.it/150x100" alt="Сливочное с кусочками черного шоколада">
+                    <img src="img/11.jpg" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
                     <div class="price">
                         355₽<span>/кг</span>
                     </div>
@@ -205,7 +265,7 @@
                     <a href="#" class="btn product-view">Быстрый просмотр</a>
                 </article>
                 <article class="product-item">
-                    <img src="http://placehold.it/150x100" alt="Сливочное с мятным сиропом">
+                    <img src="img/12.jpg" width="267" height="267" alt="Сливочное с мятным сиропом">
                     <div class="price">
                         420₽<span>/кг</span>
                     </div>
@@ -214,22 +274,30 @@
                 </article>
             </div>
             <div class="paginator">
-                <a class="page-item prev" href="#"><span>Назад</span></a>
+                <a class="page-item prev" href="#"><span class="visually-hidden">Назад</span></a>
                 <span class="page-item page-active">1</span>
                 <a class="page-item" href="#">2</a>
                 <a class="page-item" href="#">3</a>
                 <a class="page-item" href="#">4</a>
                 <a class="page-item" href="#">5</a>
-                <a class="page-item next" href="#"><span>Вперед</span></a>
+                <a class="page-item next" href="#"><span class="visually-hidden">Вперед</span></a>
             </div>
         </section>
     </main>
     <footer class="page-footer">
         <section class="social">
-            <a class="social social-tw" href="https://twitter.com/htmlacademy_ru">tw</a>
-            <a class="social social-inst" href="https://www.instagram.com/htmlacademy/">inst</a>
-            <a class="social social-fb" href="https://www.facebook.com/htmlacademy">fb</a>
-            <a class="social social-vk" href="https://vk.com/htmlacademy">vk</a>
+            <a class="social social-tw" href="https://twitter.com/htmlacademy_ru">
+                <span class="visually-hidden">twitter</span>
+            </a>
+            <a class="social social-inst" href="https://www.instagram.com/htmlacademy/">
+                <span class="visually-hidden">instagram</span>
+            </a>
+            <a class="social social-fb" href="https://www.facebook.com/htmlacademy">
+                <span class="visually-hidden">facebook</span>
+            </a>
+            <a class="social social-vk" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">vk</span>
+            </a>
         </section>
         <ul class="footer-links">
             <li class="love">

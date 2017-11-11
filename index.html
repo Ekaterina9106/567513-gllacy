@@ -45,16 +45,19 @@
             <div class="btn search">
                 Поиск
                 <form class="pop-up search-pop-up">
-                    <input class="input" type="text" placeholder="Что ищем?">
+                    <label for="search" class="visually-hidden">Поиск</label>
+                    <input class="input" type="search" name="search" id="search" placeholder="Что ищем?">
                 </form>
             </div>
             <div class="btn enter">
                 Вход
                 <div class="pop-up login-pop-up">
                     <form action="#" method="post">
-                        <input class="input" type="email" placeholder="Электронная почта">
-                        <input class="input" type="password" placeholder="Пароль">
-                        <button class="btn">Войти</button>
+                        <label for="email" class="visually-hidden">Электронная почта</label>
+                        <input class="input" type="email" id="email" placeholder="Электронная почта">
+                        <label for="password" class="visually-hidden">Пароль</label>
+                        <input class="input" type="password" id="password" placeholder="Пароль">
+                        <button class="btn" type="submit">Войти</button>
                         <a class="form-link" href="#">Забыли пароль?</a>
                         <a class="form-link" href="#">Новая регистрация</a>
                     </form>
@@ -103,7 +106,7 @@
         <section class="catalog">
             <div class="products">
                 <article class="product-item">
-                    <img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+                    <img src="img/1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
                     <span class="hit">Хит</span>
                     <div class="price">
                         310₽<span>/кг</span>
@@ -112,7 +115,7 @@
                     <a href="#" class="btn product-view">Быстрый просмотр</a>
                 </article>
                 <article class="product-item">
-                    <img src="http://placehold.it/150x100" alt="Сливочно-кофейное с кусочками шоколада">
+                    <img src="img/2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
                     <span class="hit">Хит</span>
                     <div class="price">
                         380₽<span>/кг</span>
@@ -121,7 +124,7 @@
                     <a href="#" class="btn product-view">Быстрый просмотр</a>
                 </article>
                 <article class="product-item">
-                    <img src="http://placehold.it/150x100" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+                    <img src="img/3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                     <span class="hit">Хит</span>
                     <div class="price">
                         355₽<span>/кг</span>
@@ -130,7 +133,7 @@
                     <a href="#" class="btn product-view">Быстрый просмотр</a>
                 </article>
                 <article class="product-item">
-                    <img src="http://placehold.it/150x100" alt="Сливочное крем-брюле с карамельной подливкой">
+                    <img src="img/4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                     <span class="hit">Хит</span>
                     <div class="price">
                         415₽<span>/кг</span>
@@ -167,13 +170,14 @@
             <div class="newsletter">
                 <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
                 <form action="#" method="post">
-                    <input type="email" name="e-mail" placeholder="Электронная почта">
+                    <label for="newsletter-email" class="visually-hidden">Электронная почта</label>
+                    <input type="email" name="e-mail" id="newsletter-email" placeholder="Электронная почта">
                     <button class="btn" type="submit">Отправить</button>
                 </form>
             </div>
         </div>
         <section class="map">
-            <img src="http://placehold.it/150x100" alt="Карта">
+            <img src="img/map.jpg" width="1200" height="430" alt="Карта">
             <div class="contacts">
                 <p>
                     Адрес главного офиса и <br> офлайн-магазина:
@@ -189,10 +193,18 @@
     </main>
     <footer class="page-footer">
         <section class="social">
-            <a class="social social-tw" href="https://twitter.com/htmlacademy_ru">tw</a>
-            <a class="social social-inst" href="https://www.instagram.com/htmlacademy/">inst</a>
-            <a class="social social-fb" href="https://www.facebook.com/htmlacademy">fb</a>
-            <a class="social social-vk" href="https://vk.com/htmlacademy">vk</a>
+            <a class="social social-tw" href="https://twitter.com/htmlacademy_ru">
+                <span class="visually-hidden">twitter</span>
+            </a>
+            <a class="social social-inst" href="https://www.instagram.com/htmlacademy/">
+                <span class="visually-hidden">instagram</span>
+            </a>
+            <a class="social social-fb" href="https://www.facebook.com/htmlacademy">
+                <span class="visually-hidden">facebook</span>
+            </a>
+            <a class="social social-vk" href="https://vk.com/htmlacademy">
+                <span class="visually-hidden">vk</span>
+            </a>
         </section>
         <ul class="footer-links">
             <li class="love">
@@ -218,11 +230,14 @@
         </section>
     </footer>
     <div class="modal">
-        <span class="cross"></span>
+        <button type="button" aria-label="Закрыть" class="cross"></button>
         <form action="#" method="post">
-            <input class="input" type="text" placeholder="Как вас зовут?">
-            <input class="input" type="text" placeholder="Ваша почта для ответа?">
-            <textarea name="text" placeholder="Напишите что-нибудь..."></textarea>
+            <label for="feedback-name" class="visually-hidden">Как вас зовут?</label>
+            <input class="input" type="text" id="feedback-name" placeholder="Как вас зовут?">
+            <label for="eedback-email" class="visually-hidden">Ваша почта для ответа?</label>
+            <input class="input" type="email" id="feedback-email" placeholder="Ваша почта для ответа?">
+            <label for="message" class="visually-hidden">Напишите что-нибудь...</label>
+            <textarea name="text" id="feedback-message" placeholder="Напишите что-нибудь..."></textarea>
             <button type="submit" class="btn">Отправить</button>
         </form>
     </div>
