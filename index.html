@@ -9,7 +9,7 @@
 <body>
     <header class="page-header">
         <div class="logo">
-            <img class="logo-img" src="http://placehold.it/150x100" alt="Логотип">
+            <img class="logo-img" src="img/logo.svg" alt="Логотип">
         </div>
         <nav class="main-menu">
             <ul>
@@ -44,7 +44,7 @@
         <div class="user-block">
             <div class="btn search">
                 Поиск
-                <form class="pop-up search-pop-up">
+                <form class="pop-up search-pop-up" method="post">
                     <label for="search" class="visually-hidden">Поиск</label>
                     <input class="input" type="search" name="search" id="search" placeholder="Что ищем?">
                 </form>
@@ -54,9 +54,9 @@
                 <div class="pop-up login-pop-up">
                     <form action="#" method="post">
                         <label for="email" class="visually-hidden">Электронная почта</label>
-                        <input class="input" type="email" id="email" placeholder="Электронная почта">
+                        <input class="input" type="email" id="email" name="email" placeholder="Электронная почта">
                         <label for="password" class="visually-hidden">Пароль</label>
-                        <input class="input" type="password" id="password" placeholder="Пароль">
+                        <input class="input" type="password" id="password" name="password" placeholder="Пароль">
                         <button class="btn" type="submit">Войти</button>
                         <a class="form-link" href="#">Забыли пароль?</a>
                         <a class="form-link" href="#">Новая регистрация</a>
@@ -171,7 +171,7 @@
                 <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
                 <form action="#" method="post">
                     <label for="newsletter-email" class="visually-hidden">Электронная почта</label>
-                    <input type="email" name="e-mail" id="newsletter-email" placeholder="Электронная почта">
+                    <input type="email" name="email" id="newsletter-email" placeholder="Электронная почта">
                     <button class="btn" type="submit">Отправить</button>
                 </form>
             </div>
@@ -222,7 +222,7 @@
         </ul>
         <section class="copyright">
             <a class="htmlacademy-logo" href="#">
-                  <img src="http://placehold.it/150x100" alt="html academy">
+                <img src="img/logo-htmlacademy.svg" alt="html academy">
             </a>
             <p>
                 Сделано в <a class="academy-link" href="http://htmlacademy.ru">HTML Academy</a> Ⓒ 2017
@@ -233,11 +233,11 @@
         <button type="button" aria-label="Закрыть" class="cross"></button>
         <form action="#" method="post">
             <label for="feedback-name" class="visually-hidden">Как вас зовут?</label>
-            <input class="input" type="text" id="feedback-name" placeholder="Как вас зовут?">
+            <input class="input" type="text" id="feedback-name" name="name" placeholder="Как вас зовут?">
             <label for="eedback-email" class="visually-hidden">Ваша почта для ответа?</label>
-            <input class="input" type="email" id="feedback-email" placeholder="Ваша почта для ответа?">
+            <input class="input" type="email" id="feedback-email" name="email" placeholder="Ваша почта для ответа?">
             <label for="message" class="visually-hidden">Напишите что-нибудь...</label>
-            <textarea name="text" id="feedback-message" placeholder="Напишите что-нибудь..."></textarea>
+            <textarea name="text" id="feedback-message" name="message" placeholder="Напишите что-нибудь..."></textarea>
             <button type="submit" class="btn">Отправить</button>
         </form>
     </div>

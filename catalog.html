@@ -9,7 +9,7 @@
 <body>
     <header class="page-header">
         <a class="logo" href="#">
-            <img class="logo-img" src="http://placehold.it/150x100" alt="Логотип">
+            <img class="logo-img" src="img/logo.svg" alt="Логотип">
         </a>
         <nav class="main-menu">
             <ul>
@@ -44,7 +44,7 @@
         <div class="user-block">
             <div class="btn search">
                 Поиск
-                <form class="pop-up search-pop-up">
+                <form class="pop-up search-pop-up" method="post">
                     <label for="search" class="visually-hidden">Поиск</label>
                     <input class="input" type="text" name="search" id="search" placeholder="Что ищем?">
                 </form>
@@ -53,9 +53,9 @@
                 Вход
                 <form action="#" method="post" class="pop-up login-pop-up">
                     <label for="email" class="visually-hidden">Электронная почта</label>
-                    <input class="input" type="email" id="email" placeholder="Электронная почта">
+                    <input class="input" type="email" id="email" name="email" placeholder="Электронная почта">
                     <label for="password" class="visually-hidden">Пароль</label>
-                    <input class="input" type="password" id="password" placeholder="Пароль">
+                    <input class="input" type="password" id="password" name="password" placeholder="Пароль">
                     <button class="btn" type="submit">Войти</button>
                     <a class="form-link" href="#">Забыли пароль?</a>
                     <a class="form-link" href="#">Новая регистрация</a>
@@ -69,7 +69,7 @@
                             <button type="button" aria-label="Закрыть" class="cross"></button>
                         </td>
                         <td>
-                            <img src="img/basket1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                            <img src="img/1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
                         </td>
                         <td>
                             Пломбир с апельсиновым джемом
@@ -86,7 +86,7 @@
                             <button type="button" aria-label="Закрыть" class="cross"></button>
                         </td>
                         <td>
-                            <img src="img/basket2.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                            <img src="img/3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
                         </td>
                         <td>
                             Клубничный пломбир с присыпкой из белого шоколада
@@ -108,15 +108,15 @@
             <span class="time">С 10 до 20, ежедневно</span>
             <span class="phone">8 812 450-25-25</span>
         </div>
+    </header>
+    <main>
         <ul class="breadcrumbs">
             <li><a href="#">Главная</a></li>
             <li><a href="#">Каталог</a></li>
             <li><a href="#">Сливочное</a></li>
         </ul>
-    </header>
-    <main>
         <h1>Сливочное мороженое</h1>
-        <form class="filter">
+        <form class="filter" method="post">
             <fieldset>
                 <legend>Сортировка:</legend>
                 <select>
@@ -128,7 +128,8 @@
             </fieldset>
             <fieldset>
                 <legend>Цена:</legend>
-                <input type="range" min="100" max="500" step="1">
+                <input type="number" name="prise-min" value="100">
+                <input type="number" name="prise-max" value="500">
             </fieldset>
             <fieldset>
                 <legend>Жирность:</legend>
@@ -153,23 +154,23 @@
                 <legend>Наполнители:</legend>
                 <label>
                     шоколадные
-                    <input type="checkbox" value="chocolate">
+                    <input type="checkbox" value="chocolate" name="filler[]">
                 </label>
                 <label>
                     сахарные присыпки
-                    <input type="checkbox" value="sugar">
+                    <input type="checkbox" value="sugar" name="filler[]">
                 </label>
                 <label>
                     фрукты
-                    <input type="checkbox" value="fruits">
+                    <input type="checkbox" value="fruits" name="filler[]">
                 </label>
                 <label>
                     сиропы
-                    <input type="checkbox" value="syrup">
+                    <input type="checkbox" value="syrup" name="filler[]">
                 </label>
                 <label>
                     джемы
-                    <input type="checkbox" value="jam">
+                    <input type="checkbox" value="jam" name="filler[]">
                 </label>
             </fieldset>
             <button type="submit" class="btn">Применить</button>
@@ -315,7 +316,7 @@
         </ul>
         <section class="copyright">
             <a class="htmlacademy-logo" href="#">
-                  <img src="http://placehold.it/150x100" alt="html academy">
+            <img src="img/logo-htmlacademy.svg" alt="html academy">
             </a>
             <p>
                 Сделано в <a class="academy-link" href="http://htmlacademy.ru">HTML Academy</a> Ⓒ 2017
