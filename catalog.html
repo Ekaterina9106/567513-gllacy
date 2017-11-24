@@ -119,8 +119,10 @@
             </a>
         </div>
         <div class="info">
-            <span class="time">С 10 до 20, ежедневно</span>
-            <span class="phone">8 812 450-25-25</span>
+            <div>
+                <span class="time">С 10 до 20, ежедневно</span>
+                <span class="phone">8 812 450-25-25</span>
+            </div>
         </div>
     </header>
     <main>
@@ -131,7 +133,7 @@
         </ul>
         <h1 class="ice">Сливочное мороженое</h1>
         <form class="filter" method="post">
-            <fieldset>
+            <fieldset class="sort">
                 <legend>Сортировка:</legend>
                 <select>
                     <option>по популярности</option>
@@ -140,12 +142,12 @@
                     <option>по жирности</option>
                 </select>
             </fieldset>
-            <fieldset>
+            <fieldset class="price-filter">
                 <legend>Цена:</legend>
-                <input type="number" name="prise-min" value="100">
-                <input type="number" name="prise-max" value="500">
+                <input type="number" name="price-min" value="100">
+                <input type="number" name="price-max" value="500">
             </fieldset>
-            <fieldset>
+            <fieldset class="fat">
                 <legend>Жирность:</legend>
                     <input id="radio-fat-0" class="switcher visually-hidden" type="radio" name="fat" value="0"/>
                     <label for="radio-fat-0">
@@ -168,7 +170,7 @@
                         выше 30%
                     </label>
             </fieldset>
-            <fieldset>
+            <fieldset class="filler">
                 <legend>Наполнители:</legend>
                 <input id="chocolate" class="switcher visually-hidden" type="checkbox" name="filler[]" value="chocolate"/>
                 <label for="chocolate">
@@ -310,16 +312,16 @@
     </main>
     <footer class="page-footer">
         <section class="social">
-            <a class="social social-tw" href="https://twitter.com/htmlacademy_ru">
+            <a class="social-item social-tw" href="https://twitter.com/htmlacademy_ru">
                 <span class="visually-hidden">twitter</span>
             </a>
-            <a class="social social-inst" href="https://www.instagram.com/htmlacademy/">
+            <a class="social-item social-inst" href="https://www.instagram.com/htmlacademy/">
                 <span class="visually-hidden">instagram</span>
             </a>
-            <a class="social social-fb" href="https://www.facebook.com/htmlacademy">
+            <a class="social-item social-fb" href="https://www.facebook.com/htmlacademy">
                 <span class="visually-hidden">facebook</span>
             </a>
-            <a class="social social-vk" href="https://vk.com/htmlacademy">
+            <a class="social-item social-vk" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">vk</span>
             </a>
         </section>
