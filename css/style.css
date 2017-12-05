@@ -95,14 +95,15 @@ a:hover, a:active {
 }
 
 .logo {
-    height: 60px;
+    height: 66px;
+    width: 156px;
 }
 
 .ice {
     font-size: 35px;
     line-height: 1.17;
     font-weight: bolder;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
 }
 
 .shop {
@@ -126,6 +127,7 @@ a:hover, a:active {
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
     box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
     background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+    border: 0;
 }
 
 .btn:hover {
@@ -453,8 +455,8 @@ a:hover, a:active {
 
 .info {
     display: flex;
-    justify-content: flex-end;
     width: 100%;
+    flex-direction: column;
 }
 
 .time {
@@ -462,6 +464,7 @@ a:hover, a:active {
     font-size: 14px;
     line-height: 1.14;
     display: block;
+    text-align: end;
 }
 
 .phone {
@@ -469,6 +472,7 @@ a:hover, a:active {
     font-size: 22px;
     line-height: 1.09;
     display: block;
+    text-align: end;
 }
 
 .offer {
@@ -568,7 +572,7 @@ a:hover, a:active {
     font-weight: bolder;
     position: absolute;
     left: 0;
-    top: 220px;
+    top: 206px;
 }
 
 .price span {
@@ -745,11 +749,14 @@ a:hover, a:active {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    padding-bottom: 25px;
+    border-top: 1px solid #a9bbb1;
 }
 
 .social {
     display: flex;
     justify-content: space-between;
+    margin-top: 36px;
 }
 
 .social-item {
@@ -776,6 +783,7 @@ a:hover, a:active {
     flex-wrap: wrap;
     width: 330px;
     height: 40px;
+    margin-top: 36px;
 }
 
 .footer-links .love {
@@ -825,6 +833,7 @@ a.social:active {
     line-height: 1.5;
     width: 192px;
     text-align: left;
+    margin-top: 36px;
 }
 
 .htmlacademy-logo {
@@ -838,8 +847,11 @@ a.social:active {
     display: flex;
 }
 
-.breadcrumbs li {
-    padding-right: 20px;
+.quotes {
+    display: inline-block;
+    margin-right: 8px;
+    margin-left: 8px;
+    vertical-align: middle;
 }
 
 .filter fieldset {
@@ -860,11 +872,12 @@ a.social:active {
     background-image: url("../img/select-arrow.svg");
     background-repeat: no-repeat;
     color: #ffffff;
+    font-weight: bold;
 }
 
 .filter select:hover {
     color: #323232;
-    background-color: rgba(255,255,255,0.2);
+    background-color: #ffffff;
 }
 
 .filter label {
@@ -931,6 +944,7 @@ a.social:active {
     border: 2px solid #ffffff;
     border-radius: 36px;
     align-self: flex-end;
+    color: #ffffff;
 }
 
 .filter-btn:hover {
