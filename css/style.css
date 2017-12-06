@@ -1064,6 +1064,7 @@ input[type="radio"].visually-hidden {
     background-image: url(../img/filter-button.svg);
     margin-left: -10px;
     margin-top: -10px;
+    cursor: pointer;
 }
 
 .bg-modal {
@@ -1117,6 +1118,7 @@ input[type="radio"].visually-hidden {
     height: 20px;
     top: 16px;
     right: 16px;
+    cursor: pointer;
 }
 
 .modal .btn {
