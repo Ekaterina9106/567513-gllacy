@@ -592,15 +592,11 @@ a:hover, a:active {
 
 .product-item:hover .overflow {
     background-color: rgba(255,255,255, 0.2);
-    z-index: 3;
+    z-index: -1;
 }
 
-.product-item:hover .img {
-    z-index: 4;
-}
-
-.product-item:hover > a {
-    z-index: 4;
+.product-item:hover {
+    z-index: 1;
 }
 
 .product-item:hover .product-view {
@@ -856,6 +852,7 @@ a:hover, a:active {
 .page-footer {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 26px;
 }
 
 .line {
