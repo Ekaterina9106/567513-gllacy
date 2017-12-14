@@ -245,7 +245,7 @@ a:hover, a:active {
     line-height: 1.125;
     text-decoration: underline;
     margin-left: 7px;
-    margin-top: -8px;
+    margin-top: -4px;
 }
 
 .main-menu > ul {
@@ -746,6 +746,7 @@ a:hover, a:active {
     background-image: url("../img/straw.jpg");
     background-repeat: no-repeat;
     border-radius: 15px;
+    background-color: #ffffff;
     width: 100%;
     margin-right: 2.25%;
     margin-left: 2.25%;
@@ -768,7 +769,7 @@ a:hover, a:active {
 .newsletter {
     background-image: url("../img/bg-post.svg");
     background-color: #ffffff;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     border-radius: 15px;
     width: 100%;
     margin-right: 2.25%;
@@ -795,6 +796,7 @@ a:hover, a:active {
     color: #5a5a5a;
     padding-top: 14px;
     padding-left: 6px;
+    margin-bottom: 10px;
 }
 
 .newsletter > * {
@@ -999,6 +1001,10 @@ a.social:active {
 
 .breadcrumbs a {
     font-weight: normal;
+}
+
+.breadcrumbs li {
+    margin-right: 3px;
 }
 
 .quotes {
